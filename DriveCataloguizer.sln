@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveCataloguizer", "DriveCataloguizer\DriveCataloguizer.csproj", "{026A123D-DD7C-484F-A930-2F803070744F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveCataloguizerViewModel", "DriveCataloguizerViewModel\DriveCataloguizerViewModel.csproj", "{65DE1C5A-E78B-4A96-B1BE-91482C85F31E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveCataloguizerModel", "DriveCataloguizerModel\DriveCataloguizerModel.csproj", "{50238F28-89EE-40D5-A93A-B22210FCB60B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveCataloguizerInfrastructure", "DriveCataloguizerInfrastructure\DriveCataloguizerInfrastructure.csproj", "{52CE8F75-2D91-44B8-902E-913CF7CDC643}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveCataloguizerCommon", "DriveCataloguizerCommon\DriveCataloguizerCommon.csproj", "{57880B8E-3ADD-4B78-A3EB-FB10EAFC06E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{026A123D-DD7C-484F-A930-2F803070744F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{026A123D-DD7C-484F-A930-2F803070744F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{026A123D-DD7C-484F-A930-2F803070744F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{026A123D-DD7C-484F-A930-2F803070744F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65DE1C5A-E78B-4A96-B1BE-91482C85F31E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65DE1C5A-E78B-4A96-B1BE-91482C85F31E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65DE1C5A-E78B-4A96-B1BE-91482C85F31E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65DE1C5A-E78B-4A96-B1BE-91482C85F31E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50238F28-89EE-40D5-A93A-B22210FCB60B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50238F28-89EE-40D5-A93A-B22210FCB60B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50238F28-89EE-40D5-A93A-B22210FCB60B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50238F28-89EE-40D5-A93A-B22210FCB60B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52CE8F75-2D91-44B8-902E-913CF7CDC643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52CE8F75-2D91-44B8-902E-913CF7CDC643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52CE8F75-2D91-44B8-902E-913CF7CDC643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52CE8F75-2D91-44B8-902E-913CF7CDC643}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57880B8E-3ADD-4B78-A3EB-FB10EAFC06E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57880B8E-3ADD-4B78-A3EB-FB10EAFC06E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57880B8E-3ADD-4B78-A3EB-FB10EAFC06E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57880B8E-3ADD-4B78-A3EB-FB10EAFC06E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
