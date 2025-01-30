@@ -10,6 +10,7 @@
     <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DriveCataloguizerInfrastructure\DriveCataloguizerInfrastructure.csproj" />
     <ProjectReference Include="..\DriveCataloguizerModel\DriveCataloguizerModel.csproj" />
   </ItemGroup>
   <ItemGroup>

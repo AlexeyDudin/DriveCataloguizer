@@ -2,18 +2,19 @@
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using DriveCataloguizerModel.Models;
+using DriveCataloguizerInfrastructure.StorageControl.Interfaces;
+using DriveCataloguizerViewModel.Interfaces;
 
 namespace DriveCataloguizerViewModel
 {
-    public class CataloguesViewModel : INotifyPropertyChanged
+    public class CataloguesViewModel : ICataloguesViewModel, INotifyPropertyChanged
     {
         private readonly ObservableCollection<CatalogueViewModel> _catalogs;
         private CatalogueViewModel _selectedCatalogue;
 
-        public CataloguesViewModel(ObservableCollection<CatalogueInformation> catalogs)
+        public CataloguesViewModel(ICatalogueRepository catalogueRepository)
         {
-            _catalogs = new ObservableCollection<CatalogueViewModel>(catalogs.Select(c => new CatalogueViewModel(c)).ToList());
+            _catalogs = new ObservableCollection<CatalogueViewModel>(catalogueRepository.Database.Local.Select(c => new CatalogueViewModel(c)).ToList());
         }
 
         public ObservableCollection<CatalogueViewModel> Catalogs => _catalogs;

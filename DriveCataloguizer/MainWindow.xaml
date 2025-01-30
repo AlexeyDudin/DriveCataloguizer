@@ -6,12 +6,45 @@
     xmlns:local="clr-namespace:DriveCataloguizer"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
-    xmlns:viewmodels="clr-namespace:DriveCataloguizerViewModel;assembly=DriveCataloguizerViewModel"
-    Title="MainWindow"
+    xmlns:viewmodels="clr-namespace:DriveCataloguizerViewModel;assembly=DriveCataloguizerViewModel" 
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    Title="Каталогизатор дисков"
     Width="800"
     Height="450"
     d:DataContext="{d:DesignInstance viewmodels:CataloguesViewModel}"
     mc:Ignorable="d">
+    <metro:MetroWindow.RightWindowCommands>
+        <metro:WindowCommands>
+            <Menu Background="Transparent">
+                <MenuItem>
+                    <MenuItem.Header>
+                        <iconPacks:PackIconOcticons Kind="Archive16" />
+                    </MenuItem.Header>
+                    <MenuItem x:Name="TapeControlAdd" Click="TapeControlAdd_Click">
+                        <MenuItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <iconPacks:PackIconCoolicons Kind="AddPlus" Margin="5 0" />
+                                <TextBlock Text="Добавить коробку" Margin="5 0"/>
+                            </StackPanel>
+                        </MenuItem.Header>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem>
+                    <MenuItem.Header>
+                        <iconPacks:PackIconPhosphorIcons Kind="Disc" />
+                    </MenuItem.Header>
+                    <MenuItem x:Name="DiskControlAdd" Click="DiskControlAdd_Click">
+                        <MenuItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <iconPacks:PackIconCoolicons Kind="AddPlus" Margin="5 0"  />
+                                <TextBlock Text="Добавить диск" Margin="5 0"/>
+                            </StackPanel>
+                        </MenuItem.Header>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+        </metro:WindowCommands>
+    </metro:MetroWindow.RightWindowCommands>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="220" />

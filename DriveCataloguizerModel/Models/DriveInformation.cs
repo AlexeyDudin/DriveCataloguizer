@@ -11,6 +11,8 @@ namespace DriveCataloguizerModel.Models
         private string _secondNumber;
         private DriveType _driveType;
         private DriveStatus _driveStatus;
+        private string _pathToDirectory;
+        private string _description;
         private CatalogueToDriveInformation? _catalogueToDrive;
 
         [Key]
@@ -53,12 +55,32 @@ namespace DriveCataloguizerModel.Models
             }
         }
 
+        public string PathToDirectory
+        {
+            get => _pathToDirectory;
+            set
+            {
+                _pathToDirectory = value;
+                OnPropertyChanged();
+            }
+        }
+
         public virtual CatalogueToDriveInformation? CatalogueToDrive 
         {
             get => _catalogueToDrive;
             set
             {
                 _catalogueToDrive = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string Description 
+        { 
+            get => _description;
+            set
+            {
+                _description = value;
                 OnPropertyChanged();
             }
         }

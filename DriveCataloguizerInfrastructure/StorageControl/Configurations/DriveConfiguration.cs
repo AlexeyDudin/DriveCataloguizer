@@ -17,6 +17,10 @@ namespace DriveCataloguizerInfrastructure.StorageControl.Configurations
                 .HasColumnName("number");
             builder.Property(d => d.SecondNumber)
                 .HasColumnName("second_number");
+            builder.Property(d => d.PathToDirectory)
+                .HasColumnName("path_to_directory");
+            builder.Property(d => d.Description)
+                .HasColumnName("drive_description");
             builder.HasOne(d => d.CatalogueToDrive)
                 .WithOne(cd => cd.Drive)
                 .HasForeignKey<CatalogueToDriveInformation>(cd => cd.DriveId)

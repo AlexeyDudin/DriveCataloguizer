@@ -11,6 +11,7 @@ namespace DriveCataloguizerInfrastructure.StorageControl
         public EfContext(string connectionString)
         {
             _connectionString = connectionString;
+            Database.Migrate();
         }
 
         /// <inheritdoc />
