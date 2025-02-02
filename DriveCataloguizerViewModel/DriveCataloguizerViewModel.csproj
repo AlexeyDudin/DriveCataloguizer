@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <OutputType>Library</OutputType>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyTitle>DriveCataloguizerViewModel</AssemblyTitle>
@@ -8,10 +8,13 @@
     <Copyright>Copyright ©  2025</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
+	<UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\DriveCataloguizerInfrastructure\DriveCataloguizerInfrastructure.csproj" />
-    <ProjectReference Include="..\DriveCataloguizerModel\DriveCataloguizerModel.csproj" />
+    <ProjectReference Include="..\DriveCataloguizerModels\DriveCataloguizerModels.csproj" />
+    <ProjectReference Include="..\DriveCataloguizerModel\DriveCataloguizerDomain.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />

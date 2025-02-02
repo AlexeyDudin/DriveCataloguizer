@@ -11,20 +11,27 @@ namespace DriveCataloguizer
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
+        private readonly CataloguesViewModel _cataloguesViewModel;
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = Locator.Current.GetService<ICataloguesViewModel>() as CataloguesViewModel;
+            _cataloguesViewModel = Locator.Current.GetService<ICataloguesViewModel>() as CataloguesViewModel;
+            DataContext = _cataloguesViewModel;
         }
 
         private void TapeControlAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            _cataloguesViewModel.AddNewCatalogue();
         }
 
         private void DiskControlAdd_Click(object sender, RoutedEventArgs e)
         {
+            _cataloguesViewModel.AddNewDrive();
+        }
 
+        private void TapeControlEdit_Click(object sender, RoutedEventArgs e)
+        {
+            _cataloguesViewModel.EditCatalogue();
         }
     }
 }

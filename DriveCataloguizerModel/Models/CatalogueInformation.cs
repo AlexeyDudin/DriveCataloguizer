@@ -9,7 +9,7 @@ namespace DriveCataloguizerModel.Models
     {
         private string _number = string.Empty;
         private long _capacity = 0;
-        private ObservableCollection<CatalogueToDriveInformation> _drives;
+        private ObservableCollection<CatalogueToDriveInformation> _drives = new ObservableCollection<CatalogueToDriveInformation>();
 
         [Key]
         public long Id { get; set; }

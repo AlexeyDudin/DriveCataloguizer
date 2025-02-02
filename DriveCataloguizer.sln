@@ -1,17 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveCataloguizer", "DriveCataloguizer\DriveCataloguizer.csproj", "{026A123D-DD7C-484F-A930-2F803070744F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveCataloguizerViewModel", "DriveCataloguizerViewModel\DriveCataloguizerViewModel.csproj", "{65DE1C5A-E78B-4A96-B1BE-91482C85F31E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveCataloguizerModel", "DriveCataloguizerModel\DriveCataloguizerModel.csproj", "{50238F28-89EE-40D5-A93A-B22210FCB60B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveCataloguizerDomain", "DriveCataloguizerModel\DriveCataloguizerDomain.csproj", "{50238F28-89EE-40D5-A93A-B22210FCB60B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveCataloguizerInfrastructure", "DriveCataloguizerInfrastructure\DriveCataloguizerInfrastructure.csproj", "{52CE8F75-2D91-44B8-902E-913CF7CDC643}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveCataloguizerCommon", "DriveCataloguizerCommon\DriveCataloguizerCommon.csproj", "{57880B8E-3ADD-4B78-A3EB-FB10EAFC06E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveCataloguizerModels", "DriveCataloguizerModels\DriveCataloguizerModels.csproj", "{5731C468-5D48-4C2A-80E2-F958D7C26ED6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{57880B8E-3ADD-4B78-A3EB-FB10EAFC06E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57880B8E-3ADD-4B78-A3EB-FB10EAFC06E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57880B8E-3ADD-4B78-A3EB-FB10EAFC06E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5731C468-5D48-4C2A-80E2-F958D7C26ED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5731C468-5D48-4C2A-80E2-F958D7C26ED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5731C468-5D48-4C2A-80E2-F958D7C26ED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5731C468-5D48-4C2A-80E2-F958D7C26ED6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
