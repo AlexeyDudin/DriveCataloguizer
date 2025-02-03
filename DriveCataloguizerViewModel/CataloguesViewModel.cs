@@ -133,6 +133,8 @@ namespace DriveCataloguizerViewModel
             set
             {
                 _isAddDriveOpen = value;
+                if (!IsAddDriveOpen)
+                    UpdateDrives();
                 OnPropertyChanged();
             }
         }
@@ -156,6 +158,12 @@ namespace DriveCataloguizerViewModel
         {
             SelectedDrive = new DriveViewModel(new DriveInformation(), _driveHandler, () => IsAddDriveOpen = false, false);
             IsAddDriveOpen = true;
+        }
+
+        public void EditDrive()
+        {
+            if (SelectedDrive != null)
+                IsAddDriveOpen = true;
         }
     }
 }

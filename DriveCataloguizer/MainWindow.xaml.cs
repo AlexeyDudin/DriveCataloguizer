@@ -21,17 +21,27 @@ namespace DriveCataloguizer
 
         private void TapeControlAdd_Click(object sender, RoutedEventArgs e)
         {
-            _cataloguesViewModel.AddNewCatalogue();
+            _cataloguesViewModel?.AddNewCatalogue();
         }
 
         private void DiskControlAdd_Click(object sender, RoutedEventArgs e)
         {
-            _cataloguesViewModel.AddNewDrive();
+            _cataloguesViewModel?.AddNewDrive();
         }
 
         private void TapeControlEdit_Click(object sender, RoutedEventArgs e)
         {
-            _cataloguesViewModel.EditCatalogue();
+            _cataloguesViewModel?.EditCatalogue();
+        }
+
+        private void DiskControlEdit_Click(object sender, RoutedEventArgs e)
+        {
+            _cataloguesViewModel?.EditDrive();
+        }
+
+        private void NonCataloguedDrives_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            _cataloguesViewModel?.SelectedDrive?.OpenExplorerWithDirectory();
         }
     }
 }

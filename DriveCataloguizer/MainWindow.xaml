@@ -13,6 +13,7 @@
     Width="800"
     Height="450"
     d:DataContext="{d:DesignInstance viewmodels:CataloguesViewModel}"
+    WindowState="Maximized"
     mc:Ignorable="d">
     <metro:MetroWindow.Flyouts>
         <metro:FlyoutsControl>
@@ -76,6 +77,14 @@
                             </StackPanel>
                         </MenuItem.Header>
                     </MenuItem>
+                    <MenuItem x:Name="DiskControlEdit" Click="DiskControlEdit_Click">
+                        <MenuItem.Header>
+                            <StackPanel Orientation="Horizontal">
+                                <iconPacks:PackIconIonicons Margin="5,0" Kind="CreateMD" />
+                                <TextBlock Margin="5,0" Text="Редактировать диск" />
+                            </StackPanel>
+                        </MenuItem.Header>
+                    </MenuItem>
                 </MenuItem>
             </Menu>
         </metro:WindowCommands>
@@ -83,9 +92,9 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="220" />
-            <ColumnDefinition Width="7" />
+            <ColumnDefinition Width="3" />
             <ColumnDefinition Width="2*" />
-            <ColumnDefinition Width="7" />
+            <ColumnDefinition Width="3" />
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
@@ -156,11 +165,14 @@
         </DataGrid>
         <GridSplitter Grid.Column="3" />
         <DataGrid
+            x:Name="NonCataloguedDrives"
             Grid.Column="4"
             AutoGenerateColumns="False"
             CanUserAddRows="False"
             CanUserDeleteRows="False"
-            ItemsSource="{Binding NonCataloguedDrives}">
+            ItemsSource="{Binding NonCataloguedDrives}"
+            MouseDoubleClick="NonCataloguedDrives_MouseDoubleClick"
+            SelectedItem="{Binding SelectedDrive, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
             <DataGrid.Columns>
                 <DataGridTextColumn
                     Width="*"
@@ -174,6 +186,14 @@
                     Width="*"
                     Binding="{Binding Path=Description, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
                     Header="Описание" />
+                <DataGridTextColumn
+                    Width="100"
+                    Binding="{Binding Path=DriveType, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                    Header="Тип диска" />
+                <DataGridTextColumn
+                    Width="120"
+                    Binding="{Binding Path=DriveStatus, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                    Header="Статус диска" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

@@ -10,5 +10,7 @@ namespace DriveCataloguizerModels.Interfaces
         void Add(DriveInformation driveInformation);
         void Edit(DriveInformation driveInformation);
         void Delete(DriveInformation driveInformation);
+        void OpenExplorerDirectory(DriveInformation driveInformation);
+        bool IsDirectoryExist(DriveInformation driveInformation);
     }
 }

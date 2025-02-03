@@ -1,6 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
+using System.IO;
 using System.Runtime.CompilerServices;
+using System.Windows;
+using DriveCataloguizerCommon.Enums;
 using DriveCataloguizerModel.Models;
 using DriveCataloguizerModels.Interfaces;
 
@@ -52,6 +55,37 @@ namespace DriveCataloguizerViewModel
             }
         }
 
+        public DriveCataloguizerCommon.Enums.DriveType DriveType
+        {
+            get => _driveInformation.DriveType;
+            set
+            {
+                _driveInformation.DriveType = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public DriveStatus DriveStatus
+        {
+            get => _driveInformation.DriveStatus;
+            set
+            {
+                _driveInformation.DriveStatus = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string PathToDirectory
+        {
+            get => _driveInformation.PathToDirectory;
+            set
+            {
+                _driveInformation.PathToDirectory = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(IsDriectoryExist));
+            }
+        }
+
         public void SaveChanges()
         {
             if (_isEdit)
@@ -60,6 +94,20 @@ namespace DriveCataloguizerViewModel
                 _driveHandler.Add(_driveInformation);
             _closeFlyoutAction();
         }
+
+        public void OpenExplorerWithDirectory()
+        {
+            try
+            {
+                _driveHandler.OpenExplorerDirectory(_driveInformation);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        public bool IsDriectoryExist => _driveHandler.IsDirectoryExist(_driveInformation);
 
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
         private void OnPropertyChanged([CallerMemberName] string propertyName = "") => PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
